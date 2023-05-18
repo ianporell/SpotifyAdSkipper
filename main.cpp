@@ -29,7 +29,7 @@ int main() {
             //wait so that next song is played
             std::this_thread::sleep_for(std::chrono::seconds(4));
 
-            //convert path to a wstring
+            //convert path to a lpcwstr
             std::wstring wPath(path.begin(), path.end());
             LPCWSTR cwPath = wPath.c_str();
 
