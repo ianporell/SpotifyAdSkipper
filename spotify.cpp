@@ -17,7 +17,7 @@ void restart_spotify(std::wstring path) {
     std::this_thread::sleep_for(std::chrono::seconds(1));
 
     //this should start spotify without unfocusing the current window which is annoying
-    ShellExecute(NULL, L"open", L"C:\\Users\\chris\\AppData\\Roaming\\Spotify\\spotify.exe", NULL, NULL, SW_NORMAL);
+    ShellExecute(NULL, L"open", path, NULL, NULL, SW_NORMAL);
 }
 
 void unpause_song() {
