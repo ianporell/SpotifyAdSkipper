@@ -10,7 +10,7 @@ bool ad_playing() {
     return FindWindow(NULL, L"Advertisement") != NULL;
 }
 
-void restart_spotify(std::wstring path) {
+void restart_spotify(LPCWSTR path) {
     //fix this later
     system("taskkill /IM spotify.exe -f");
 

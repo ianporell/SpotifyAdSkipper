@@ -1,3 +1,5 @@
+#include <windows.h>
+
 bool ad_playing();
-void restart_spotify(std::wstring path);
+void restart_spotify(LPCWSTR path);
 void unpause_song();

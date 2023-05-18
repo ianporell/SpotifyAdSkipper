@@ -30,10 +30,10 @@ int main() {
             std::this_thread::sleep_for(std::chrono::seconds(4));
 
             //convert path to a wstring
-            std::wstring wPath(path.length(), L'\0');
-            std::copy(path.begin(), path.end(), &wPath);
+            std::wstring wPath(path.begin(), path.end());
+            LPCWSTR cwPath = wPath.c_str();
 
-            restart_spotify(wPath);
+            restart_spotify(cwPath);
 
             std::this_thread::sleep_for(std::chrono::seconds(1));
             unpause_song();
