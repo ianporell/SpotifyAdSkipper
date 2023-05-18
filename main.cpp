@@ -27,7 +27,7 @@ int main() {
         std::this_thread::sleep_for(std::chrono::milliseconds(100));
         if (ad_playing()) {
             //wait so that next song is played
-            std::this_thread::sleep_for(std::chrono::seconds(4));
+            std::this_thread::sleep_for(std::chrono::seconds(3));
 
             //convert path to a lpcwstr
             std::wstring wPath(path.begin(), path.end());
