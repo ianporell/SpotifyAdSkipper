@@ -24,10 +24,10 @@ int main() {
 
     std::cout << "Listening for advertisements..." << std::endl;
     while (true) {
-        std::this_thread::sleep_for(std::chrono::milliseconds(100));
+        std::this_thread::sleep_for(std::chrono::seconds(1));
         if (ad_playing()) {
             //wait so that next song is played
-            std::this_thread::sleep_for(std::chrono::seconds(3));
+            std::this_thread::sleep_for(std::chrono::seconds(2));
 
             //convert path to a lpcwstr
             std::wstring wPath(path.begin(), path.end());
